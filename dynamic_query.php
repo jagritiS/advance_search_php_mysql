@@ -71,8 +71,8 @@ div {
    <label for="gender">Gender</label><br>
    <select name="gender">
         <option name="0">Choose Gender</option>
-        <option name="M">Male</option>
-        <option name="F">Female</option>
+        <option name="M">M</option>
+        <option name="F">F</option>
     </select>
   <input type="submit" value="Submit" name="submit_button">
 </form>
@@ -108,7 +108,7 @@ div {
          $condition = "";
          $sql = "select * from person where 1";
 
-         if($gender!="Choose Gender"){
+         if($gender!=0){
 
                 $condition = " and gender='$gender'";
          }
